@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using SistemaVendas.Models;
+using SistemaVendas.Models.ViewModels;
 using System.Diagnostics;
 
 namespace SistemaVendas.Controllers {
@@ -20,7 +20,7 @@ namespace SistemaVendas.Controllers {
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error() {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new SistemaVendas.Models.ViewModels.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
