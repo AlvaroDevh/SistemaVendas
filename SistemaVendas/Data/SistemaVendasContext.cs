@@ -15,5 +15,9 @@ namespace SistemaVendas.Data
         }
 
         public DbSet<SistemaVendas.Models.Departament> Departament { get; set; } = default!;
+        public DbSet<Seller> Sellers { get; set; }
+        public DbSet<SalesRecord> SalesRecord { get; set; }
+
+
     }
 }
