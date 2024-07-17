@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SistemaVendas.Data;
 using SistemaVendas.Models;
 
+
 namespace SistemaVendas.Controllers
 {
     public class DepartamentsController : Controller
