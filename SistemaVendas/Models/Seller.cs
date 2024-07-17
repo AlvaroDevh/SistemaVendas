@@ -11,7 +11,15 @@
         public Departament Departament { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
-        public Seller() { } 
+        public Seller() { }
+
+        public Seller( string name, string email, DateTime birthData, double salary, Departament departament) {
+            Name = name;
+            Email = email;
+            BirthData = birthData;
+            Salary = salary;
+            Departament = departament;
+        }
 
         public Seller(int id, string name, string email, DateTime birthData, double salary, Departament departament) {
             Id = id;

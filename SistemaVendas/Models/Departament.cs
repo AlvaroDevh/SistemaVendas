@@ -12,6 +12,9 @@
             Name = name;
         }
 
+        public Departament(string name) {
+            Name = name;
+        }
         public void AddSeller(Seller seller) {
             Sellers.Add(seller);
         }
