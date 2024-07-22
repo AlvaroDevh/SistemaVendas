@@ -13,6 +13,9 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 
+.custom-header-row {
+    background-color: rgb(233, 84, 32);
+}
 :root,
 [data-bs-theme=light] {
     --bs-blue: #007bff;

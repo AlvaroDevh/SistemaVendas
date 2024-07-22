@@ -20,3 +20,7 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.custom-header-row {
+    background-color: rgb(233, 84, 32);
+}

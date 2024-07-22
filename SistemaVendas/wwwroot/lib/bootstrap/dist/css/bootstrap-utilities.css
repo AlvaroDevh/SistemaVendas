@@ -4,6 +4,10 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+.custom-header-row {
+    background-color: rgb(233, 84, 32);
+}
 .clearfix::after {
   display: block;
   clear: both;
