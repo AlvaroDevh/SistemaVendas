@@ -13,5 +13,11 @@ namespace SistemaVendas.Services {
         public List<Seller> FindAll() {
             return _context.Sellers.ToList();
         }
+
+        public void Insert(Seller obj) {
+            obj.Departament = _context.Departament.First();
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
