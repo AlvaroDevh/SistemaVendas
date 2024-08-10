@@ -1,0 +1,58 @@
+﻿@model SistemaVendas.Models.Seller
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+
+    <h4>Vendedor</h4>
+    <hr />
+    <d1 class="d1-Horizontal">
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Name);
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Name);
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Email);
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Email);
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(Model => Model.BirthData);
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.BirthData);
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Salary);
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Salary);
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Departament);
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Departament.Name);
+        </dd>
+
+    </d1>
+
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+        <a asp-action="Index">Voltar a lista</a>
+    </div>
+
+</div>
+

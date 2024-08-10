@@ -1,5 +1,6 @@
 ﻿using SistemaVendas.Data;
 using SistemaVendas.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SistemaVendas.Services {
     public class SellerService {
@@ -21,7 +22,7 @@ namespace SistemaVendas.Services {
 
         public Seller FindById(int id)
         {
-            return _context.Sellers.FirstOrDefault(obj => obj.Id == id);
+            return _context.Sellers.Include(obj => obj.Departament).FirstOrDefault(obj => obj.Id == id);
         }
 
         public void Remove(int id)
