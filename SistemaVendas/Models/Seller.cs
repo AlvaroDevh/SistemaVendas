@@ -7,16 +7,24 @@ namespace SistemaVendas.Models
 
         public int Id { get; set; }
 
+        [Required (ErrorMessage = "{0} obrigatório")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "{0} tamanho deve ser entre {2} e {1}")]
         [Display(Name = "Nome")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "{0} obrigatório")]
+        [EmailAddress(ErrorMessage = "Digite um email válido")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "{0} obrigatório")]
         [Display(Name = "Aniversário")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime BirthData { get; set; }
 
+        [Required(ErrorMessage = "{0} obrigatório")]
+        [Range (100.00, 5000.00, ErrorMessage ="{0} o valor deve ser entre {1} e {2}")]
         [Display(Name = "Salário")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public double Salary { get; set; }
