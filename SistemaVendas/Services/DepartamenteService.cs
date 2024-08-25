@@ -1,5 +1,6 @@
 ﻿using SistemaVendas.Data;
 using SistemaVendas.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SistemaVendas.Services {
     public class DepartamenteService {
@@ -11,9 +12,9 @@ namespace SistemaVendas.Services {
             _context = context;
         }
 
-        public List<Departament> FindAll() {
+        public async Task<List<Departament>> FindAllAsync() {
 
-            return _context.Departament.OrderBy(x => x.Name).ToList();
+            return await _context.Departament.OrderBy(x => x.Name).ToListAsync();
         }
     }
 }

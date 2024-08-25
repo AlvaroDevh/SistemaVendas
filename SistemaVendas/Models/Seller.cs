@@ -30,7 +30,7 @@ namespace SistemaVendas.Models
         public double Salary { get; set; }
 
 
-        public Departament Departament { get; set; }
+        public Departament ? Departament { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
         public int DepartamentId { get; set; }
 
